@@ -1,0 +1,10 @@
+.env
+results
+.venv
+__pycache__
+.DS_Store
+*.pyc
+.ipynb_checkpoints
+.pytest_cache
+.vscode
+.cursor

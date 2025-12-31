@@ -1,0 +1,10 @@
+[project]
+name = "fluidvoice-prompt-eval"
+version = "0.1.0"
+requires-python = ">=3.12"
+dependencies = [
+    "openai>=2.14.0",
+    "python-dotenv>=1.2.1",
+    "pyyaml>=6.0.3",
+    "rich>=14.2.0",
+]

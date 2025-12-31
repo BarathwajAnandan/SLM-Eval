@@ -1,0 +1,227 @@
+# Model & Provider Configuration for FluidVoice Eval
+
+# Providers: Define your API endpoints and API key environment variables here
+providers:
+  openai:
+    base_url: "https://api.openai.com/v1"
+    api_key_env: "OPENAI_API_KEY"
+  
+  groq:
+    base_url: "https://api.groq.com/openai/v1"
+    api_key_env: "GROQ_API_KEY"
+  
+  anthropic:
+    base_url: "https://api.anthropic.com/v1"
+    api_key_env: "ANTHROPIC_API_KEY"
+  
+  deepseek:
+    base_url: "https://api.deepseek.com/v1"
+    api_key_env: "DEEPSEEK_API_KEY"
+  
+  together:
+    base_url: "https://api.together.xyz/v1"
+    api_key_env: "TOGETHER_API_KEY"
+  
+  nvidia:
+    base_url: "https://integrate.api.nvidia.com/v1"
+    api_key_env: "NVIDIA_API_KEY"
+  
+  aimlapi:
+    base_url: "https://api.aimlapi.com/v1"
+    api_key_env: "AIMLAPI_KEY"
+  
+  lm-studio:
+    base_url: "http://10.0.0.3:8048/v1"
+    api_key: "lm-studio" # Usually ignored by local runners
+
+  local:
+    base_url: "http://localhost:11434/v1"
+    api_key: "ollama" # Local providers often don't need real keys
+
+# Models: Map model names to providers defined above
+models:
+  # flagship: High reasoning, perfect instruction following
+  - name: "o1-preview"
+    provider: "openai"
+    tier: "flagship"
+
+  - name: "gpt-5.1-chat-latest"
+    provider: "openai"
+    tier: "flagship"
+    use_responses_api: true
+
+  - name: "gpt-4o"
+    provider: "openai"
+    tier: "flagship"
+  
+  - name: "deepseek-reasoner"
+    provider: "deepseek"
+    tier: "flagship"
+
+  - name: "nvidia/nemotron-3-nano-30b-a3b"
+    provider: "nvidia"
+    tier: "flagship"
+    enable_thinking: true
+    reasoning_budget: 16384
+
+  - name: "mistralai/devstral-2-123b-instruct-2512"
+    provider: "nvidia"
+    tier: "flagship"
+
+  - name: "openai/gpt-oss-120b"
+    provider: "nvidia"
+    tier: "flagship"
+    reasoning_effort: "low"
+
+  - name: "microsoft/phi-3.5-mini-instruct"
+    provider: "nvidia"
+    tier: "small"
+
+  - name: "meta/llama-3.2-3b-instruct"
+    provider: "nvidia"
+    tier: "small"
+
+  - name: "ibm/granite-3.3-8b-instruct"
+    provider: "nvidia"
+    tier: "mid"
+
+  # AIMLAPI Models (from screenshots)
+
+
+
+  - name: "google/gemini-3-flash-preview"
+    provider: "aimlapi"
+    tier: "flagship"
+
+  - name: "google/gemini-3-flash"
+    provider: "aimlapi"
+    tier: "flagship"
+
+  - name: "claude-sonnet-4-5"
+    provider: "aimlapi"
+    tier: "flagship"
+
+  - name: "claude-haiku-4-5"
+    provider: "aimlapi"
+    tier: "mid"
+
+  - name: "claude-haiku-4-5-20251001"
+    provider: "aimlapi"
+    tier: "mid"
+
+  - name: "google/gemini-2.5-flash"
+    provider: "aimlapi"
+    tier: "mid"
+
+  - name: "openai/gpt-5-1-chat-latest"
+    provider: "aimlapi"
+    tier: "flagship"
+
+  # mid: Smaller, fast, usually reliable
+  - name: "llama-3.3-70b-versatile"
+    provider: "groq"
+    tier: "mid"
+  
+  - name: "openai/gpt-oss-20b"
+    provider: "lm-studio"
+    tier: "low"
+    reasoning_effort: "medium" # Standardized to medium
+  
+  - name: "deepseek-chat"
+    provider: "deepseek"
+    tier: "mid"
+
+  - name: "qwen/qwen3-4b-2507"
+    provider: "lm-studio"
+    tier: "mid"
+
+  - name: "rnj-1"
+    provider: "lm-studio"
+    tier: "mid"
+
+  - name: "qwen/qwen3-vl-4b"
+    provider: "lm-studio"
+    tier: "mid"
+
+  - name: "microsoft/phi-4-mini-reasoning"
+    provider: "lm-studio"
+    tier: "mid"
+
+  - name: "qwen/qwen3-4b-thinking-2507"
+    provider: "lm-studio"
+    tier: "mid"
+  # small: The target for prompt optimization (Edge/Local LLMs)
+  - name: "mistralai/ministral-3-3b"
+    provider: "lm-studio"
+    tier: "small"
+
+  - name: "liquid/lfm2-1.2b"
+    provider: "lm-studio"
+    tier: "small"
+
+  - name: "meta-llama/Llama-3.2-3B"
+    provider: "lm-studio"
+    tier: "small"
+
+  - name: "unsloth/Llama-3.2-3B-Instruct-GGUF"
+    provider: "lm-studio"
+    tier: "small"
+
+  - name: "lmstudio-community/Llama-3.2-1B-Instruct-GGUF"
+    provider: "lm-studio"
+    tier: "small"
+
+  - name: "unsloth/functiongemma-270m-it-GGUF"
+    provider: "lm-studio"
+    tier: "small"
+
+  - name: "mradermacher/GrammarCoder-1.5B-Base-GGUF"
+    provider: "lm-studio"
+    tier: "small" # Note: Base models ramble, use Instruct for better results
+
+  - name: "MaziyarPanahi/Qwen3-0.6B-GGUF"
+    provider: "lm-studio"
+    tier: "small"
+
+  - name: "pszemraj/flan-t5-large-grammar-synthesis"
+    provider: "lm-studio"
+    tier: "small"
+
+  - name: "GrammarCoder-1.5B-Instruct"
+    provider: "lm-studio"
+    tier: "small"
+
+  - name: "HarleyCooper/Qwen3-0.6B-Dakota-Grammar-RL"
+    provider: "lm-studio"
+    tier: "small"
+
+  - name: "unsloth/smolLM3-3B-128K-GGUF"
+    provider: "lm-studio"
+    tier: "small"
+
+  - name: "qwen2.5-3b-instruct"
+    provider: "lm-studio"
+    tier: "small"
+
+  - name: "HuggingFaceTB/SmolLM3-3B-Instruct"
+    provider: "lm-studio"
+    tier: "small"
+
+  - name: "llama-3.1-8b-instant"
+    provider: "groq"
+    tier: "small"
+  
+  - name: "gemma-2-9b-it"
+    provider: "groq"
+    tier: "small"
+
+  - name: "llama-3.2-3b-preview"
+    provider: "groq"
+    tier: "small"
+
+# Global Evaluation Settings
+settings:
+  temperature: 0.1
+  max_tokens: 1024
+  timeout_seconds: 30
+  retries: 2

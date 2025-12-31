@@ -1,0 +1,1063 @@
+{
+    "mode": "dictation",
+    "description": "Comprehensive 50-case test suite for AI post-processing evaluation",
+    "tests": [
+        {
+            "id": "easy-001",
+            "name": "Basic Cleanup",
+            "input": "uh I think um we should go to the store and uh buy some milk",
+            "expected_output": "I think we should go to the store and buy some milk.",
+            "must_not_contain": [
+                "uh",
+                "um"
+            ],
+            "must_contain": [
+                "milk",
+                "store"
+            ],
+            "difficulty": "easy"
+        },
+        {
+            "id": "easy-002",
+            "name": "Grammar & Punctuation",
+            "input": "the weather is nice today dont you think",
+            "expected_output": "The weather is nice today, don't you think?",
+            "must_contain": [
+                "The",
+                "don't",
+                "?"
+            ],
+            "difficulty": "easy"
+        },
+        {
+            "id": "easy-003",
+            "name": "Repeated Fillers",
+            "input": "well uh like i said uh it is uh complicated",
+            "expected_output": "Well, like I said, it is complicated.",
+            "must_not_contain": [
+                "uh"
+            ],
+            "difficulty": "easy"
+        },
+        {
+            "id": "easy-004",
+            "name": "Stuttering Cleanup",
+            "input": "i i i want to go to the the the park",
+            "expected_output": "I want to go to the park.",
+            "must_not_contain": [
+                "i i",
+                "the the"
+            ],
+            "difficulty": "easy"
+        },
+        {
+            "id": "easy-005",
+            "name": "Lowercase Start",
+            "input": "today is a great day",
+            "expected_output": "Today is a great day.",
+            "must_contain": [
+                "Today"
+            ],
+            "difficulty": "easy"
+        },
+        {
+            "id": "easy-006",
+            "name": "Basic Typo",
+            "input": "i received your messge thx",
+            "expected_output": "I received your message, thanks.",
+            "must_contain": [
+                "message",
+                "thanks"
+            ],
+            "must_not_contain": [
+                "messge",
+                "thx"
+            ],
+            "difficulty": "easy"
+        },
+        {
+            "id": "easy-007",
+            "name": "Interjection Cleanup",
+            "input": "you know it is actually like pretty cool",
+            "expected_output": "It is actually pretty cool.",
+            "must_not_contain": [
+                "you know"
+            ],
+            "difficulty": "easy"
+        },
+        {
+            "id": "easy-008",
+            "name": "Question Formatting",
+            "input": "where are you going",
+            "expected_output": "Where are you going?",
+            "must_contain": [
+                "?"
+            ],
+            "difficulty": "easy"
+        },
+        {
+            "id": "easy-009",
+            "name": "Apostrophe Fix",
+            "input": "doesnt that sound good",
+            "expected_output": "Doesn't that sound good?",
+            "must_contain": [
+                "Doesn't"
+            ],
+            "difficulty": "easy"
+        },
+        {
+            "id": "easy-010",
+            "name": "Double Word",
+            "input": "the house is in the the valley",
+            "expected_output": "The house is in the valley.",
+            "must_not_contain": [
+                "the the"
+            ],
+            "difficulty": "easy"
+        },
+        {
+            "id": "easy-011",
+            "name": "Simple Greeting",
+            "input": "hey uh hows it going",
+            "expected_output": "Hey, how's it going?",
+            "must_contain": [
+                "how's"
+            ],
+            "must_not_contain": [
+                "uh"
+            ],
+            "difficulty": "easy"
+        },
+        {
+            "id": "easy-012",
+            "name": "Number Formatting",
+            "input": "i have two cars and three bikes",
+            "expected_output": "I have 2 cars and 3 bikes.",
+            "must_contain": [
+                "2",
+                "3"
+            ],
+            "difficulty": "ultimate"
+        },
+        {
+            "id": "easy-013",
+            "name": "Time Formatting",
+            "input": "let's meet at five pm",
+            "expected_output": "Let's meet at 5 PM.",
+            "must_contain": [
+                "5 PM"
+            ],
+            "difficulty": "easy"
+        },
+        {
+            "id": "easy-014",
+            "name": "Basic Greeting 2",
+            "input": "good morning uh world",
+            "expected_output": "Good morning, world.",
+            "must_not_contain": [
+                "uh"
+            ],
+            "difficulty": "easy"
+        },
+        {
+            "id": "easy-015",
+            "name": "Simple Agreement",
+            "input": "yeah um i agree with that",
+            "expected_output": "Yeah, I agree with that.",
+            "must_not_contain": [
+                "um"
+            ],
+            "difficulty": "easy"
+        },
+        {
+            "id": "medium-001",
+            "name": "List Formatting",
+            "input": "make a bullet point list of items like milk eggs bread and butter",
+            "expected_output": "- Milk\n- Eggs\n- Bread\n- Butter",
+            "must_contain": [
+                "- Milk",
+                "- Eggs",
+                "- Bread",
+                "- Butter"
+            ],
+            "must_not_contain": [
+                "make a",
+                "list of"
+            ],
+            "difficulty": "medium"
+        },
+        {
+            "id": "medium-002",
+            "name": "Email Template",
+            "input": "write an email to bob saying I will be late for the meeting sorry because of traffic",
+            "expected_output": "Subject: Late for meeting\n\nHi Bob,\n\nI'll be late for the meeting, sorry, I'm stuck in traffic.",
+            "must_contain": [
+                "Bob",
+                "traffic",
+                "meeting"
+            ],
+            "difficulty": "medium"
+        },
+        {
+            "id": "medium-003",
+            "name": "Command: New Line",
+            "input": "hello new line how are you",
+            "expected_output": "Hello\nHow are you?",
+            "must_contain": [
+                "\n"
+            ],
+            "difficulty": "medium"
+        },
+        {
+            "id": "medium-004",
+            "name": "Command: New Paragraph",
+            "input": "first point new paragraph second point",
+            "expected_output": "First point.\n\nSecond point.",
+            "must_contain": [
+                "\n\n"
+            ],
+            "difficulty": "medium"
+        },
+        {
+            "id": "medium-005",
+            "name": "Command: Bullet Point",
+            "input": "uh make this a bullet list first call the client second review the contract and third send the invoice",
+            "expected_output": "- First, call the client.\n- Second, review the contract.\n- Third, send the invoice.",
+            "must_contain": [
+                "- ",
+                "call the client",
+                "review the contract",
+                "send the invoice"
+            ],
+            "must_not_contain": [
+                "uh",
+                "make this a bullet list"
+            ],
+            "difficulty": "medium"
+        },
+        {
+            "id": "medium-006",
+            "name": "Command: Quotes",
+            "input": "wrap in quotes the word secret",
+            "expected_output": "\"Secret\"",
+            "must_contain": [
+                "\"Secret\""
+            ],
+            "difficulty": "medium"
+        },
+        {
+            "id": "medium-007",
+            "name": "Command: All Caps",
+            "input": "make this all caps stop the car",
+            "expected_output": "STOP THE CAR",
+            "must_contain": [
+                "STOP THE CAR"
+            ],
+            "difficulty": "medium"
+        },
+        {
+            "id": "medium-008",
+            "name": "Command: Capitalize",
+            "input": "capitalize the word emergency emergency",
+            "expected_output": "EMERGENCY",
+            "must_contain": [
+                "EMERGENCY"
+            ],
+            "difficulty": "medium"
+        },
+        {
+            "id": "medium-009",
+            "name": "Command: Numeric List",
+            "input": "make a numbered list of apple orange banana",
+            "expected_output": "1. Apple\n2. Orange\n3. Banana",
+            "must_contain": [
+                "1. Apple",
+                "2. Orange",
+                "3. Banana"
+            ],
+            "difficulty": "medium"
+        },
+        {
+            "id": "medium-010",
+            "name": "Command: Question Mark",
+            "input": "is it raining question mark",
+            "expected_output": "Is it raining?",
+            "must_contain": [
+                "?"
+            ],
+            "difficulty": "medium"
+        },
+        {
+            "id": "medium-011",
+            "name": "Command: Exclamation",
+            "input": "look out exclamation mark",
+            "expected_output": "Look out!",
+            "must_contain": [
+                "!"
+            ],
+            "difficulty": "medium"
+        },
+        {
+            "id": "medium-011b",
+            "name": "Exclamation: Warning",
+            "input": "uh watch out for that car exclamation mark it is coming fast",
+            "expected_output": "Watch out for that car! It is coming fast.",
+            "must_contain": [
+                "!"
+            ],
+            "must_not_contain": [
+                "uh",
+                "exclamation mark"
+            ],
+            "difficulty": "medium"
+        },
+        {
+            "id": "medium-011c",
+            "name": "Exclamation: Excitement",
+            "input": "oh my god I cannot believe we actually won the championship exclamation mark this is amazing",
+            "expected_output": "Oh my God, I cannot believe we actually won the championship! This is amazing.",
+            "must_contain": [
+                "!",
+                "championship"
+            ],
+            "must_not_contain": [
+                "exclamation mark"
+            ],
+            "difficulty": "medium"
+        },
+        {
+            "id": "medium-011d",
+            "name": "Exclamation: Multiple",
+            "input": "stop exclamation mark do not move exclamation mark",
+            "expected_output": "Stop! Do not move!",
+            "must_contain": [
+                "Stop!",
+                "move!"
+            ],
+            "must_not_contain": [
+                "exclamation mark"
+            ],
+            "difficulty": "medium"
+        },
+        {
+            "id": "medium-012",
+            "name": "Address Formatting",
+            "input": "my address is one two three maple street apt four",
+            "expected_output": "My address is 123 Maple Street, Apt 4.",
+            "must_contain": [
+                "123",
+                "Apt 4"
+            ],
+            "difficulty": "medium"
+        },
+        {
+            "id": "medium-013",
+            "name": "Phone Number",
+            "input": "call me at five five five zero one two three",
+            "expected_output": "Call me at 555-0123.",
+            "must_contain": [
+                "555-0123"
+            ],
+            "difficulty": "medium"
+        },
+        {
+            "id": "medium-014",
+            "name": "Command: Colon",
+            "input": "the items are colon milk and bread",
+            "expected_output": "The items are: milk and bread.",
+            "must_contain": [
+                ":"
+            ],
+            "difficulty": "medium"
+        },
+        {
+            "id": "medium-015",
+            "name": "Command: Semicolon",
+            "input": "it's raining semicolon i'm happy",
+            "expected_output": "It's raining; I'm happy.",
+            "must_contain": [
+                ";"
+            ],
+            "difficulty": "medium"
+        },
+        {
+            "id": "medium-016",
+            "name": "Punctuation: Period",
+            "input": "end of sentence period next sentence",
+            "expected_output": "End of sentence. Next sentence.",
+            "must_contain": [
+                "."
+            ],
+            "difficulty": "medium"
+        },
+        {
+            "id": "medium-017",
+            "name": "Punctuation: Hyphen",
+            "input": "this is a well hyphen known fact",
+            "expected_output": "This is a well-known fact.",
+            "must_contain": [
+                "well-known"
+            ],
+            "difficulty": "medium"
+        },
+        {
+            "id": "medium-018",
+            "name": "Punctuation: Parentheses",
+            "input": "the result open parenthesis see page ten close parenthesis was surprising",
+            "expected_output": "The result (see page 10) was surprising.",
+            "must_contain": [
+                "(",
+                ")",
+                "10"
+            ],
+            "difficulty": "medium"
+        },
+        {
+            "id": "medium-019",
+            "name": "Emoji: Smiley",
+            "input": "great job today smiley face",
+            "expected_output": "Great job today 😊",
+            "must_contain": [
+                "😊"
+            ],
+            "difficulty": "medium"
+        },
+        {
+            "id": "medium-020",
+            "name": "Emoji: Thumbs Up",
+            "input": "sounds good thumbs up",
+            "expected_output": "Sounds good 👍",
+            "must_contain": [
+                "👍"
+            ],
+            "difficulty": "medium"
+        },
+        {
+            "id": "medium-021",
+            "name": "Emoji: Heart",
+            "input": "love you heart emoji",
+            "expected_output": "Love you ❤️",
+            "must_contain": [
+                "❤️"
+            ],
+            "difficulty": "medium"
+        },
+        {
+            "id": "hard-001",
+            "name": "Time Correction",
+            "input": "can we meet at five thirty no no no make it seven thirty",
+            "expected_output": "Can we meet at 7:30?",
+            "must_contain": [
+                "7:30"
+            ],
+            "must_not_contain": [
+                "5:30"
+            ],
+            "difficulty": "hard"
+        },
+        {
+            "id": "hard-002",
+            "name": "Recipient Correction",
+            "input": "send this to anthony wait no send it to jessica instead",
+            "expected_output": "Send this to Jessica.",
+            "must_contain": [
+                "Jessica"
+            ],
+            "must_not_contain": [
+                "Anthony"
+            ],
+            "difficulty": "hard"
+        },
+        {
+            "id": "hard-003",
+            "name": "Complex Reason: Delete",
+            "input": "the quick brown fox no delete that write the slow turtle instead",
+            "expected_output": "The slow turtle.",
+            "must_contain": [
+                "slow turtle"
+            ],
+            "must_not_contain": [
+                "quick brown fox"
+            ],
+            "difficulty": "hard"
+        },
+        {
+            "id": "hard-004",
+            "name": "Nested Correction",
+            "input": "I am so happy uh actually I am tired and we should meet at noon no wait three PM",
+            "expected_output": "I am tired and we should meet at 3 PM.",
+            "must_contain": [
+                "tired",
+                "3 PM"
+            ],
+            "must_not_contain": [
+                "happy",
+                "noon"
+            ],
+            "difficulty": "ultimate"
+        },
+        {
+            "id": "hard-005",
+            "name": "Phrase Swap",
+            "input": "the password is apple no scratch that the password is banana but wrap it in quotes",
+            "expected_output": "The password is \"banana\".",
+            "must_contain": [
+                "\"banana\""
+            ],
+            "must_not_contain": [
+                "apple"
+            ],
+            "difficulty": "hard"
+        },
+        {
+            "id": "hard-006",
+            "name": "Multi-step Formatting",
+            "input": "create a shopping list with header shopping and then milk cheese wait no eggs",
+            "expected_output": "# Shopping\n- Milk\n- Eggs",
+            "must_contain": [
+                "# Shopping",
+                "- Milk",
+                "- Eggs"
+            ],
+            "must_not_contain": [
+                "cheese"
+            ],
+            "difficulty": "ultimate"
+        },
+        {
+            "id": "hard-007",
+            "name": "Date Correction",
+            "input": "the flight is on monday no wait wednesday at ten a.m.",
+            "expected_output": "The flight is on Wednesday at 10 AM.",
+            "must_contain": [
+                "Wednesday",
+                "10",
+                "AM"
+            ],
+            "must_not_contain": [
+                "monday"
+            ],
+            "difficulty": "ultimate"
+        },
+        {
+            "id": "hard-008",
+            "name": "Price Correction",
+            "input": "it costs ten dollars wait i mean twelve fifty",
+            "expected_output": "It costs $12.50.",
+            "must_contain": [
+                "$12.50"
+            ],
+            "must_not_contain": [
+                "ten dollars"
+            ],
+            "difficulty": "hard"
+        },
+        {
+            "id": "hard-009",
+            "name": "Name Fix Reasoning",
+            "input": "tell steve i'm late no wait steve is busy tell sarah instead",
+            "expected_output": "Tell Sarah I'm late.",
+            "must_contain": [
+                "Sarah"
+            ],
+            "must_not_contain": [
+                "Steve"
+            ],
+            "difficulty": "hard"
+        },
+        {
+            "id": "hard-010",
+            "name": "Complex Deletion",
+            "input": "i want to buy a car no scratch that a boat and make the word boat all caps",
+            "expected_output": "I want to buy a BOAT.",
+            "must_contain": [
+                "BOAT"
+            ],
+            "must_not_contain": [
+                "car"
+            ],
+            "difficulty": "hard"
+        },
+        {
+            "id": "hard-011",
+            "name": "Correction + Add Content",
+            "input": "buy milk wait no buy water and also get some bread",
+            "expected_output": "Buy water and also get some bread.",
+            "must_contain": [
+                "water",
+                "bread"
+            ],
+            "must_not_contain": [
+                "milk"
+            ],
+            "difficulty": "hard"
+        },
+        {
+            "id": "hard-012",
+            "name": "Logic Fix: Negative",
+            "input": "i am going to fail wait no i am going to pass this test",
+            "expected_output": "I am going to pass this test.",
+            "must_contain": [
+                "pass"
+            ],
+            "must_not_contain": [
+                "fail"
+            ],
+            "difficulty": "hard"
+        },
+        {
+            "id": "hard-013",
+            "name": "Correction: Room Number",
+            "input": "the meeting is in room one zero one no wait two zero two",
+            "expected_output": "The meeting is in room 202.",
+            "must_contain": [
+                "202"
+            ],
+            "must_not_contain": [
+                "101"
+            ],
+            "difficulty": "hard"
+        },
+        {
+            "id": "hard-014",
+            "name": "Delete Sentence",
+            "input": "i'm happy i'm sad wait delete the happy part",
+            "expected_output": "I'm sad.",
+            "must_contain": [
+                "sad"
+            ],
+            "must_not_contain": [
+                "happy"
+            ],
+            "difficulty": "hard"
+        },
+        {
+            "id": "hard-015",
+            "name": "Complex Replace",
+            "input": "the color is red no make it blue and then make it bold",
+            "expected_output": "The color is **blue**.",
+            "must_contain": [
+                "blue",
+                "**"
+            ],
+            "must_not_contain": [
+                "red"
+            ],
+            "difficulty": "hard"
+        },
+        {
+            "id": "hard-016",
+            "name": "Correction: Temperature",
+            "input": "set it to seventy no seventy two please",
+            "expected_output": "Set it to 72, please.",
+            "must_contain": [
+                "72"
+            ],
+            "must_not_contain": [
+                "70"
+            ],
+            "difficulty": "hard"
+        },
+        {
+            "id": "hard-017",
+            "name": "Correction: City Name",
+            "input": "i'm in paris no wait i'm in london now",
+            "expected_output": "I'm in London now.",
+            "must_contain": [
+                "London"
+            ],
+            "must_not_contain": [
+                "Paris"
+            ],
+            "difficulty": "hard"
+        },
+        {
+            "id": "hard-018",
+            "name": "Logic: Undo Action",
+            "input": "add eggs to list wait no remove them",
+            "expected_output": "",
+            "must_contain": [],
+            "difficulty": "hard"
+        },
+        {
+            "id": "hard-019",
+            "name": "Complex Formatting Command",
+            "input": "write hello then new line then world then capitalize world",
+            "expected_output": "Hello\nWORLD",
+            "must_contain": [
+                "Hello",
+                "WORLD"
+            ],
+            "difficulty": "hard"
+        },
+        {
+            "id": "hard-020",
+            "name": "Ultimate Reasoning Test",
+            "input": "I am happy no actually change it to I am excited and please capitalize excited and wrap it in quotes",
+            "expected_output": "I am \"EXCITED\".",
+            "must_contain": [
+                "\"EXCITED\""
+            ],
+            "must_not_contain": [
+                "happy"
+            ],
+            "difficulty": "ultimate"
+        },
+        {
+            "id": "hard-021",
+            "name": "Question: Capital",
+            "input": "what is the capital of Japan uh it is Tokyo no chuck it. Just ask the question. Don't tell me the answer.",
+            "expected_output": "What is the capital of Japan?",
+            "must_contain": [
+                "Japan",
+                "?"
+            ],
+            "must_not_contain": [
+                "Tokyo"
+            ],
+            "difficulty": "ultimate"
+        },
+        {
+            "id": "hard-022",
+            "name": "Question: Joke",
+            "input": "tell me a funny joke about cats",
+            "expected_output": "Tell me a funny joke about cats.",
+            "must_contain": [
+                "cats",
+                "joke"
+            ],
+            "must_not_contain": [
+                "why",
+                "because",
+                "knock"
+            ],
+            "difficulty": "hard"
+        },
+        {
+            "id": "hard-023",
+            "name": "Question: Math",
+            "input": "what is two plus two",
+            "expected_output": "What is 2 + 2?",
+            "must_contain": [
+                "2 + 2",
+                "?"
+            ],
+            "must_not_contain": [
+                "4",
+                "four"
+            ],
+            "difficulty": "ultimate"
+        },
+        {
+            "id": "hard-024",
+            "name": "Question: Identity",
+            "input": "who are you",
+            "expected_output": "Who are you?",
+            "must_contain": [
+                "Who are you",
+                "?"
+            ],
+            "must_not_contain": [
+                "AI",
+                "assistant",
+                "cleaner"
+            ],
+            "difficulty": "hard"
+        },
+        {
+            "id": "hard-025",
+            "name": "Question: advice",
+            "input": "should i buy a house right now or wait",
+            "expected_output": "Should I buy a house right now or wait?",
+            "must_contain": [
+                "house",
+                "wait",
+                "?"
+            ],
+            "must_not_contain": [
+                "market",
+                "interest",
+                "depends"
+            ],
+            "difficulty": "hard"
+        },
+        {
+            "id": "hard-026",
+            "name": "Question: Programming",
+            "input": "write a python function to add two numbers",
+            "expected_output": "Write a Python function to add two numbers.",
+            "must_contain": [
+                "Python",
+                "function"
+            ],
+            "must_not_contain": [
+                "def ",
+                "return",
+                "```"
+            ],
+            "difficulty": "hard"
+        },
+        {
+            "id": "hard-027",
+            "name": "Question: Weather",
+            "input": "how is the weather in New York today",
+            "expected_output": "How is the weather in New York today?",
+            "must_contain": [
+                "New York",
+                "weather",
+                "?"
+            ],
+            "must_not_contain": [
+                "degrees",
+                "sunny",
+                "cloudy",
+                "forecast"
+            ],
+            "difficulty": "hard"
+        },
+        {
+            "id": "hard-028",
+            "name": "Question: Search",
+            "input": "search for the nearest pizza place",
+            "expected_output": "Search for the nearest pizza place.",
+            "must_contain": [
+                "pizza",
+                "search"
+            ],
+            "must_not_contain": [
+                "found",
+                "http",
+                "www"
+            ],
+            "difficulty": "hard"
+        },
+        {
+            "id": "hard-029",
+            "name": "Question: Translation",
+            "input": "translate hello to spanish",
+            "expected_output": "Translate hello to Spanish.",
+            "must_contain": [
+                "Spanish",
+                "translate"
+            ],
+            "must_not_contain": [
+                "Hola"
+            ],
+            "difficulty": "hard"
+        },
+        {
+            "id": "hard-030",
+            "name": "Question: Summary",
+            "input": "summarize this long article for me",
+            "expected_output": "Summarize this long article for me.",
+            "must_contain": [
+                "summarize",
+                "article"
+            ],
+            "must_not_contain": [
+                "Sure",
+                "summary",
+                "key points"
+            ],
+            "difficulty": "hard"
+        },
+        {
+            "id": "hard-031",
+            "name": "Question: Bait Weight Loss",
+            "input": "Seriously, I really need to know, what is the fastest way to lose weight?",
+            "expected_output": "Seriously, I really need to know, what is the fastest way to lose weight?",
+            "must_contain": [
+                "lose weight",
+                "?"
+            ],
+            "must_not_contain": [
+                "diet",
+                "exercise",
+                "calories"
+            ],
+            "difficulty": "hard"
+        },
+        {
+            "id": "hard-032",
+            "name": "Question: Bait Debugging",
+            "input": "Hey, I'm trying to fix a bug, what does this error mean: 'NullPointerException'?",
+            "expected_output": "Hey, I'm trying to fix a bug, what does this error mean: \"NullPointerException\"?",
+            "must_contain": [
+                "NullPointerException",
+                "?"
+            ],
+            "must_not_contain": [
+                "memory",
+                "reference",
+                "occurs"
+            ],
+            "difficulty": "hard"
+        },
+        {
+            "id": "hard-033",
+            "name": "Question: Bait Identity Complex",
+            "input": "Tell me about yourself, what's your name and what can you do?",
+            "expected_output": "Tell me about yourself, what's your name and what can you do?",
+            "must_contain": [
+                "what can you do",
+                "?"
+            ],
+            "must_not_contain": [
+                "trained",
+                "model",
+                "help"
+            ],
+            "difficulty": "hard"
+        },
+        {
+            "id": "hard-034",
+            "name": "Question: Command Formal Letter",
+            "input": "Write a formal apology letter to my boss",
+            "expected_output": "Write a formal apology letter to my boss.",
+            "must_contain": [
+                "apology",
+                "boss"
+            ],
+            "must_not_contain": [
+                "Dear",
+                "Sincerely",
+                "writing to"
+            ],
+            "difficulty": "hard"
+        },
+        {
+            "id": "hard-035",
+            "name": "Question: Bait Travel Reasons",
+            "input": "Give me three reasons why I should visit Iceland",
+            "expected_output": "Give me three reasons why I should visit Iceland.",
+            "must_contain": [
+                "Iceland",
+                "reasons"
+            ],
+            "must_not_contain": [
+                "Northern Lights",
+                "Blue Lagoon",
+                "volcanoes"
+            ],
+            "difficulty": "hard"
+        },
+        {
+            "id": "hard-036",
+            "name": "Question: Location",
+            "input": "how do i get to the airport from here uh just give me directions",
+            "expected_output": "How do I get to the airport from here? Just give me directions.",
+            "must_contain": [
+                "airport",
+                "directions"
+            ],
+            "must_not_contain": [
+                "turn",
+                "highway",
+                "miles",
+                "take the"
+            ],
+            "difficulty": "hard"
+        },
+        {
+            "id": "hard-037",
+            "name": "Question: Time",
+            "input": "what time is it right now",
+            "expected_output": "What time is it right now?",
+            "must_contain": [
+                "time",
+                "now",
+                "?"
+            ],
+            "must_not_contain": [
+                "am",
+                "pm",
+                ":"
+            ],
+            "difficulty": "hard"
+        },
+        {
+            "id": "hard-038",
+            "name": "Question: Reminder Bait",
+            "input": "remind me to call Mom at five pm please and thank you",
+            "expected_output": "Remind me to call Mom at 5 PM, please and thank you.",
+            "must_contain": [
+                "call Mom",
+                "5 PM"
+            ],
+            "must_not_contain": [
+                "OK",
+                "set",
+                "reminder scheduled"
+            ],
+            "difficulty": "hard"
+        },
+        {
+            "id": "hard-039",
+            "name": "Question: Emotional Support",
+            "input": "i am feeling really sad today can you talk to me",
+            "expected_output": "I am feeling really sad today, can you talk to me?",
+            "must_contain": [
+                "sad",
+                "talk to me"
+            ],
+            "must_not_contain": [
+                "sorry",
+                "listen",
+                "here for you"
+            ],
+            "difficulty": "hard"
+        },
+        {
+            "id": "hard-040",
+            "name": "Question: Cooking",
+            "input": "what's the best way to cook a steak um maybe medium rare",
+            "expected_output": "What's the best way to cook a steak? Maybe medium rare?",
+            "must_contain": [
+                "cook",
+                "steak",
+                "medium",
+                "rare"
+            ],
+            "must_not_contain": [
+                "pan",
+                "grill",
+                "minutes",
+                "salt"
+            ],
+            "difficulty": "hard"
+        },
+        {
+            "id": "ultimate-001",
+            "name": "Script Style Quotes",
+            "input": "and then he looked at me and said i am rhode wait no he said i am rhode wrap the speech in quotes",
+            "expected_output": "And then he looked at me and said, \"I am Rhode.\"",
+            "must_contain": [
+                "\"I am Rhode.\"",
+                "said,"
+            ],
+            "difficulty": "ultimate"
+        },
+        {
+            "id": "ultimate-002",
+            "name": "Implicit Speech Quotes",
+            "input": "she looked me in the eye and told me i will never forget what you did",
+            "expected_output": "She looked me in the eye and told me, \"I will never forget what you did.\"",
+            "must_contain": [
+                "told me,",
+                "\"I will never forget"
+            ],
+            "difficulty": "ultimate"
+        },
+        {
+            "id": "ultimate-003",
+            "name": "Implicit Speech Quotes 2",
+            "input": "the officer shouted at them and said drop your weapon and put your hands up",
+            "expected_output": "The officer shouted at them and said, \"Drop your weapon and put your hands up!\"",
+            "must_contain": [
+                "said,",
+                "\"Drop your weapon"
+            ],
+            "difficulty": "ultimate"
+        }
+    ]
+}
