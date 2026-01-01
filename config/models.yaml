@@ -1,4 +1,4 @@
-# Model & Provider Configuration for FluidVoice Eval
+# Model & Provider Configuration for LLM Eval
 
 # Providers: Define your API endpoints and API key environment variables here
 providers:
@@ -34,6 +34,10 @@ providers:
     base_url: "http://10.0.0.3:8048/v1"
     api_key: "lm-studio" # Usually ignored by local runners
 
+  lm-studio-mac:
+    base_url: "http://10.0.0.138:1234/v1"
+    api_key: "lm-studio-mac" # Usually ignored by local runners
+
   local:
     base_url: "http://localhost:11434/v1"
     api_key: "ollama" # Local providers often don't need real keys
@@ -57,6 +61,12 @@ models:
   - name: "deepseek-reasoner"
     provider: "deepseek"
     tier: "flagship"
+
+  - name: "mlx-community/Qwen3-4B-Instruct-2507-4bit"
+    provider: "lm-studio-mac"
+    tier: "flagship"
+
+
 
   - name: "nvidia/nemotron-3-nano-30b-a3b"
     provider: "nvidia"

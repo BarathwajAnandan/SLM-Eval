@@ -1,0 +1,789 @@
+{
+    "mode": "dictation",
+    "description": "Disfl-QA dataset (50 cases)",
+    "tests": [
+        {
+            "id": "disfl-qa-5a665142",
+            "name": "Disfl-QA: What did the government want T...",
+            "input": "Who did no What did the government want Thoreau to do?",
+            "expected_output": "What did the government want Thoreau to do?",
+            "must_contain": [
+                "government",
+                "Thoreau"
+            ],
+            "must_not_contain": [],
+            "difficulty": "ultimate"
+        },
+        {
+            "id": "disfl-qa-57282127",
+            "name": "Disfl-QA: What makes the Wells Fargo Cen...",
+            "input": "What makes the Bank of America Tower or wait the Wells Fargo Center stand out?",
+            "expected_output": "What makes the Wells Fargo Center stand out?",
+            "must_contain": [
+                "Center",
+                "stand",
+                "Wells"
+            ],
+            "must_not_contain": [
+                "bank",
+                "wait",
+                "america"
+            ],
+            "difficulty": "ultimate"
+        },
+        {
+            "id": "disfl-qa-57300888",
+            "name": "Disfl-QA: What was the Colonia Agrippina...",
+            "input": "What was the Colonia Agrippina's original empire, sorry, name?",
+            "expected_output": "What was the Colonia Agrippina's original name?",
+            "must_contain": [
+                "Agrippina",
+                "original",
+                "Colonia"
+            ],
+            "must_not_contain": [
+                "sorry",
+                "empire"
+            ],
+            "difficulty": "ultimate"
+        },
+        {
+            "id": "disfl-qa-5a55234d",
+            "name": "Disfl-QA: Extended networking benefits h...",
+            "input": "Extended authorization limitations, no sorry networking benefits helped those that could not connect to what platform?",
+            "expected_output": "Extended networking benefits helped those that could not connect to what platform? ",
+            "must_contain": [
+                "networking",
+                "Extended",
+                "platform"
+            ],
+            "must_not_contain": [
+                "authorization",
+                "limitations",
+                "sorry"
+            ],
+            "difficulty": "ultimate"
+        },
+        {
+            "id": "disfl-qa-5a25e8d5",
+            "name": "Disfl-QA: Who is the emphasis on when th...",
+            "input": "What is the no make that who is the emphasis on when there is a private finance initiative?",
+            "expected_output": "Who is the emphasis on when there is a private finance initiative?",
+            "must_contain": [
+                "initiative",
+                "emphasis",
+                "private"
+            ],
+            "must_not_contain": [
+                "that",
+                "make",
+                "what"
+            ],
+            "difficulty": "ultimate"
+        },
+        {
+            "id": "disfl-qa-57287d4a",
+            "name": "Disfl-QA: What dynasties inspired the Ch...",
+            "input": "What dynasties reflected no inspired the Chinese-like elements of Kublai's government?",
+            "expected_output": "What dynasties inspired the Chinese-like elements of Kublai's government?",
+            "must_contain": [
+                "government",
+                "dynasties",
+                "elements"
+            ],
+            "must_not_contain": [
+                "reflected"
+            ],
+            "difficulty": "ultimate"
+        },
+        {
+            "id": "disfl-qa-572987e4",
+            "name": "Disfl-QA: What is the density of all pri...",
+            "input": "What is the density of all primes compatible with a modulo 8 or wait 9?",
+            "expected_output": "What is the density of all primes compatible with a modulo 9?",
+            "must_contain": [
+                "compatible",
+                "density",
+                "primes"
+            ],
+            "must_not_contain": [
+                "wait"
+            ],
+            "difficulty": "ultimate"
+        },
+        {
+            "id": "disfl-qa-573098f3",
+            "name": "Disfl-QA: What did European empires rely...",
+            "input": "When or uh what did European empires rely on to supply them with resources?",
+            "expected_output": "What did European empires rely on to supply them with resources?",
+            "must_contain": [
+                "resources",
+                "European",
+                "empires"
+            ],
+            "must_not_contain": [
+                "uh",
+                "when"
+            ],
+            "difficulty": "ultimate"
+        },
+        {
+            "id": "disfl-qa-5a3e42de",
+            "name": "Disfl-QA: What did Karlen and Singer pre...",
+            "input": "What did Wahl and Ammann no no Karlen and Singer present to the US senate?",
+            "expected_output": "What did Karlen and Singer present to the US senate?",
+            "must_contain": [
+                "present",
+                "Karlen",
+                "senate"
+            ],
+            "must_not_contain": [
+                "ammann",
+                "wahl"
+            ],
+            "difficulty": "ultimate"
+        },
+        {
+            "id": "disfl-qa-57264fe6",
+            "name": "Disfl-QA: What is the current status of ...",
+            "input": "What is the current status of Schuenemann's study no scratch that I mean the Haensch study?",
+            "expected_output": "What is the current status of the Haensch study?",
+            "must_contain": [
+                "current",
+                "Haensch",
+                "status"
+            ],
+            "must_not_contain": [
+                "scratch",
+                "schuenemann",
+                "that"
+            ],
+            "difficulty": "ultimate"
+        },
+        {
+            "id": "disfl-qa-57281ab6",
+            "name": "Disfl-QA: Who was responsible for the ne...",
+            "input": "What drove residents or who was responsible rather for the new building projects in Jacksonville?",
+            "expected_output": "Who was responsible for the new building projects in Jacksonville?",
+            "must_contain": [
+                "Jacksonville",
+                "responsible",
+                "building"
+            ],
+            "must_not_contain": [
+                "what",
+                "residents",
+                "drove"
+            ],
+            "difficulty": "ultimate"
+        },
+        {
+            "id": "disfl-qa-5a25a8e9",
+            "name": "Disfl-QA: Who normally supervises inconv...",
+            "input": "Who normally supervises the largest construction projects I mean inconvenience to the public?",
+            "expected_output": "Who normally supervises inconvenience to the public?",
+            "must_contain": [
+                "inconvenience",
+                "supervises",
+                "normally"
+            ],
+            "must_not_contain": [
+                "largest",
+                "construction",
+                "mean"
+            ],
+            "difficulty": "ultimate"
+        },
+        {
+            "id": "disfl-qa-5ad40c2d",
+            "name": "Disfl-QA: Who were the Samuron?...",
+            "input": "Who were the Chinese actually the Samuron?",
+            "expected_output": "Who were the Samuron?",
+            "must_contain": [
+                "Samuron"
+            ],
+            "must_not_contain": [
+                "chinese",
+                "actually"
+            ],
+            "difficulty": "ultimate"
+        },
+        {
+            "id": "disfl-qa-5ad0426c",
+            "name": "Disfl-QA: A 60-minute long \"Question Tim...",
+            "input": "A 60-minute long \\\"Question Time\\\" takes place at where no sorry what time?",
+            "expected_output": "A 60-minute long \"Question Time\" takes place at what time?",
+            "must_contain": [
+                "Question",
+                "minute",
+                "takes"
+            ],
+            "must_not_contain": [
+                "sorry",
+                "where"
+            ],
+            "difficulty": "ultimate"
+        },
+        {
+            "id": "disfl-qa-57265642",
+            "name": "Disfl-QA: How many times did plague occu...",
+            "input": "How many times did plague occur in Paris no sorry Venice?",
+            "expected_output": "How many times did plague occur in Venice?",
+            "must_contain": [
+                "plague",
+                "Venice",
+                "times"
+            ],
+            "must_not_contain": [
+                "sorry",
+                "paris"
+            ],
+            "difficulty": "ultimate"
+        },
+        {
+            "id": "disfl-qa-57263985",
+            "name": "Disfl-QA: What does connection orientati...",
+            "input": "What does signal protocol uh no connection orientation require?",
+            "expected_output": "What does connection orientation require",
+            "must_contain": [
+                "orientation",
+                "connection",
+                "require"
+            ],
+            "must_not_contain": [
+                "uh",
+                "signal",
+                "protocol"
+            ],
+            "difficulty": "ultimate"
+        },
+        {
+            "id": "disfl-qa-5ad4e442",
+            "name": "Disfl-QA: What is not an important role ...",
+            "input": "What happens no tell me what is not an important role of the immune system?",
+            "expected_output": "What is not an important role of the immune system?",
+            "must_contain": [
+                "important",
+                "system",
+                "immune"
+            ],
+            "must_not_contain": [
+                "tell",
+                "happens"
+            ],
+            "difficulty": "ultimate"
+        },
+        {
+            "id": "disfl-qa-5a564519",
+            "name": "Disfl-QA: Who credited Paul Baran for hi...",
+            "input": "Whom no sorry Who credited Paul Baran for his development?",
+            "expected_output": "Who credited Paul Baran for his development? ",
+            "must_contain": [
+                "development",
+                "credited",
+                "Baran"
+            ],
+            "must_not_contain": [
+                "sorry",
+                "whom"
+            ],
+            "difficulty": "ultimate"
+        },
+        {
+            "id": "disfl-qa-5a6ceb16",
+            "name": "Disfl-QA: What fields may pharmacy infor...",
+            "input": "What departments rather fields may pharmacy informatics not work in?",
+            "expected_output": "What fields may pharmacy informatics not work in?",
+            "must_contain": [
+                "informatics",
+                "pharmacy",
+                "fields"
+            ],
+            "must_not_contain": [
+                "rather",
+                "departments"
+            ],
+            "difficulty": "ultimate"
+        },
+        {
+            "id": "disfl-qa-5a6ce9ab",
+            "name": "Disfl-QA: Who are FDA laws against impor...",
+            "input": "Who are U.S laws, uh make that, FDA laws against importing medications not aimed at?",
+            "expected_output": "Who are FDA laws against importing medications not aimed at?",
+            "must_contain": [
+                "medications",
+                "importing",
+                "against"
+            ],
+            "must_not_contain": [
+                "uh",
+                "make",
+                "that"
+            ],
+            "difficulty": "ultimate"
+        },
+        {
+            "id": "disfl-qa-5ad24840",
+            "name": "Disfl-QA: What are those with lower inco...",
+            "input": "What is key to getting the skills needed for high demand jobs no wait tell me what are those with lower incomes more likely to have in order to prepare for the future?",
+            "expected_output": "What are those with lower incomes more likely to have in order to prepare for the future?",
+            "must_contain": [
+                "incomes",
+                "prepare",
+                "likely"
+            ],
+            "must_not_contain": [
+                "needed",
+                "high",
+                "demand"
+            ],
+            "difficulty": "ultimate"
+        },
+        {
+            "id": "disfl-qa-5a25b668",
+            "name": "Disfl-QA: What elements make up a room e...",
+            "input": "What structure er uh rather elements make up a room edition?",
+            "expected_output": "What elements make up a room edition?",
+            "must_contain": [
+                "elements",
+                "edition"
+            ],
+            "must_not_contain": [
+                "structure",
+                "uh",
+                "rather"
+            ],
+            "difficulty": "ultimate"
+        },
+        {
+            "id": "disfl-qa-5728510f",
+            "name": "Disfl-QA: The academic body of the unive...",
+            "input": "Who is the university rahter what academic body of it is made up of how many divisions of graduate?",
+            "expected_output": "The academic body of the university is made up of how many divisions of graduate?",
+            "must_contain": [
+                "university",
+                "divisions",
+                "academic"
+            ],
+            "must_not_contain": [
+                "what",
+                "rahter"
+            ],
+            "difficulty": "ultimate"
+        },
+        {
+            "id": "disfl-qa-5ad3a21d",
+            "name": "Disfl-QA: What territory was ceded to Fr...",
+            "input": "What territory was ceded to Spain ugh should say France?",
+            "expected_output": "What territory was ceded to France?",
+            "must_contain": [
+                "territory",
+                "France",
+                "ceded"
+            ],
+            "must_not_contain": [
+                "spain",
+                "should"
+            ],
+            "difficulty": "ultimate"
+        },
+        {
+            "id": "disfl-qa-5ad02e33",
+            "name": "Disfl-QA: What grew on a global scale as...",
+            "input": "What fell no wait grew on a global scale as a result of non-imperialism?",
+            "expected_output": "What grew on a global scale as a result of non-imperialism?",
+            "must_contain": [
+                "imperialism",
+                "result",
+                "global"
+            ],
+            "must_not_contain": [
+                "wait",
+                "fell"
+            ],
+            "difficulty": "ultimate"
+        },
+        {
+            "id": "disfl-qa-5acf9d34",
+            "name": "Disfl-QA: How many students enrolled at ...",
+            "input": "How many students enrolled at the College during the spring of 2011, actually, in 2014?",
+            "expected_output": "How many students enrolled at the College during the spring of 2014?",
+            "must_contain": [
+                "enrolled",
+                "students",
+                "College"
+            ],
+            "must_not_contain": [
+                "2011",
+                "actually"
+            ],
+            "difficulty": "ultimate"
+        },
+        {
+            "id": "disfl-qa-5ad28846",
+            "name": "Disfl-QA: What equation is torque like r...",
+            "input": "Which equation no wait What equation is torque like regarding velocity?",
+            "expected_output": "What equation is torque like regarding velocity?",
+            "must_contain": [
+                "regarding",
+                "velocity",
+                "equation"
+            ],
+            "must_not_contain": [
+                "which",
+                "wait"
+            ],
+            "difficulty": "ultimate"
+        },
+        {
+            "id": "disfl-qa-572655e5",
+            "name": "Disfl-QA: What is the largest sensory fe...",
+            "input": "What is the largest sensory feature of the cilia no the ctenophora rather?",
+            "expected_output": "What is the largest sensory feature of the ctenophora?",
+            "must_contain": [
+                "ctenophora",
+                "feature",
+                "sensory"
+            ],
+            "must_not_contain": [
+                "rather",
+                "cilia"
+            ],
+            "difficulty": "ultimate"
+        },
+        {
+            "id": "disfl-qa-5acfa937",
+            "name": "Disfl-QA: Who established the psychologi...",
+            "input": "What chess uh who established the psychological school of conservative international relations?",
+            "expected_output": "Who established the psychological school of conservative international relations?",
+            "must_contain": [
+                "psychological",
+                "international",
+                "conservative"
+            ],
+            "must_not_contain": [
+                "uh",
+                "chess",
+                "what"
+            ],
+            "difficulty": "ultimate"
+        },
+        {
+            "id": "disfl-qa-57376625",
+            "name": "Disfl-QA: What offers a conceptual defin...",
+            "input": "How are er what offers a conceptual definition of force?",
+            "expected_output": "What offers a conceptual definition of force?",
+            "must_contain": [
+                "definition",
+                "conceptual",
+                "offers"
+            ],
+            "must_not_contain": [],
+            "difficulty": "ultimate"
+        },
+        {
+            "id": "disfl-qa-572757be",
+            "name": "Disfl-QA: What was the primary race of s...",
+            "input": "What was the demanded neigh the primary race of students attending Christian academies after the Brown decision?",
+            "expected_output": "What was the primary race of students attending Christian academies after the Brown decision?",
+            "must_contain": [
+                "attending",
+                "academies",
+                "Christian"
+            ],
+            "must_not_contain": [
+                "neigh",
+                "demanded"
+            ],
+            "difficulty": "ultimate"
+        },
+        {
+            "id": "disfl-qa-5ad3bce5",
+            "name": "Disfl-QA: When was the deportation of Ca...",
+            "input": "When was the migrants from Europe oh no when was the deportation of Canadians?",
+            "expected_output": "When was the deportation of Canadians?",
+            "must_contain": [
+                "deportation",
+                "Canadians"
+            ],
+            "must_not_contain": [
+                "from",
+                "europe",
+                "migrants"
+            ],
+            "difficulty": "ultimate"
+        },
+        {
+            "id": "disfl-qa-5ad4d038",
+            "name": "Disfl-QA: What immune response is not an...",
+            "input": "What allows for responses that are not tailored to a specific pathogen or rather tell me what immune response is not antigen-specific?",
+            "expected_output": "What immune response is not antigen-specific?",
+            "must_contain": [
+                "response",
+                "specific",
+                "antigen"
+            ],
+            "must_not_contain": [
+                "responses",
+                "tell",
+                "that"
+            ],
+            "difficulty": "ultimate"
+        },
+        {
+            "id": "disfl-qa-57264684",
+            "name": "Disfl-QA: Where did the black death orig...",
+            "input": "Where did the 1343 or let me say the black death originate?",
+            "expected_output": "Where did the black death originate?",
+            "must_contain": [
+                "originate",
+                "Where",
+                "death"
+            ],
+            "must_not_contain": [
+                "1343"
+            ],
+            "difficulty": "ultimate"
+        },
+        {
+            "id": "disfl-qa-5acfe91c",
+            "name": "Disfl-QA: What did Iqbal fear would stre...",
+            "input": "What did Iqbal fear would fear would weaken I mean strengthen the spiritual foundations of Islam and Muslim society?",
+            "expected_output": "What did Iqbal fear would strengthen the spiritual foundations of Islam and Muslim society?",
+            "must_contain": [
+                "foundations",
+                "strengthen",
+                "spiritual"
+            ],
+            "must_not_contain": [
+                "weaken",
+                "mean"
+            ],
+            "difficulty": "ultimate"
+        },
+        {
+            "id": "disfl-qa-5acfa235",
+            "name": "Disfl-QA: Who is the founder of the Chic...",
+            "input": "Who founded, no better yet, who is the founder of the Chicago Cubs and author of the first management accounting text book?",
+            "expected_output": "Who is the founder of the Chicago Cubs and author of the first management accounting text book?",
+            "must_contain": [
+                "management",
+                "accounting",
+                "founder"
+            ],
+            "must_not_contain": [
+                "better",
+                "founded"
+            ],
+            "difficulty": "ultimate"
+        },
+        {
+            "id": "disfl-qa-57286951",
+            "name": "Disfl-QA: What Goldman Sachs CEO is also...",
+            "input": "What Microsoft err I mean Goldman Sachs CEO is also an alumni of the University of Chicago?",
+            "expected_output": "What Goldman Sachs CEO is also an alumni of the University of Chicago?",
+            "must_contain": [
+                "University",
+                "Chicago",
+                "Goldman"
+            ],
+            "must_not_contain": [
+                "microsoft",
+                "mean"
+            ],
+            "difficulty": "ultimate"
+        },
+        {
+            "id": "disfl-qa-5728683b",
+            "name": "Disfl-QA: What is the name of the winter...",
+            "input": "Which is What is the name of the winter festival held in January that is based on fitness?",
+            "expected_output": "What is the name of the winter festival held in January that is based on fitness? ",
+            "must_contain": [
+                "festival",
+                "January",
+                "fitness"
+            ],
+            "must_not_contain": [
+                "which"
+            ],
+            "difficulty": "ultimate"
+        },
+        {
+            "id": "disfl-qa-5a25f6a3",
+            "name": "Disfl-QA: What is not due to the average...",
+            "input": "What is not due to the average earning for an architect umm rather a professional?",
+            "expected_output": "What is not due to the average earning for a professional?",
+            "must_contain": [
+                "professional",
+                "earning",
+                "average"
+            ],
+            "must_not_contain": [
+                "rather",
+                "architect"
+            ],
+            "difficulty": "ultimate"
+        },
+        {
+            "id": "disfl-qa-5728809f",
+            "name": "Disfl-QA: When did Gou's calendar become...",
+            "input": "How did or no make that when did Gou's calendar become the official calendar of the Yuan?",
+            "expected_output": "When did Gou's calendar become the official calendar of the Yuan?",
+            "must_contain": [
+                "calendar",
+                "official",
+                "become"
+            ],
+            "must_not_contain": [
+                "make",
+                "that"
+            ],
+            "difficulty": "ultimate"
+        },
+        {
+            "id": "disfl-qa-57300bf5",
+            "name": "Disfl-QA: What was the Rhine considered ...",
+            "input": "Where is no What was the Rhine considered to invaders in WWII?",
+            "expected_output": "What was the Rhine considered to invaders in WWII?",
+            "must_contain": [
+                "considered",
+                "invaders",
+                "Rhine"
+            ],
+            "must_not_contain": [
+                "where"
+            ],
+            "difficulty": "ultimate"
+        },
+        {
+            "id": "disfl-qa-5a678dce",
+            "name": "Disfl-QA: What method do Muslim run scho...",
+            "input": "Which method no sorry what method do Muslim run schools use in their curriculum?",
+            "expected_output": "What method do Muslim run schools use in their curriculum?",
+            "must_contain": [
+                "curriculum",
+                "schools",
+                "Muslim"
+            ],
+            "must_not_contain": [
+                "which",
+                "sorry"
+            ],
+            "difficulty": "ultimate"
+        },
+        {
+            "id": "disfl-qa-5ad40397",
+            "name": "Disfl-QA:  Where did the Grand Canal not...",
+            "input": "Where did the Kublai Khan no the Grand Canal not begin?",
+            "expected_output": " Where did the Grand Canal not begin?",
+            "must_contain": [
+                "Where",
+                "Grand",
+                "Canal"
+            ],
+            "must_not_contain": [
+                "kublai",
+                "khan"
+            ],
+            "difficulty": "ultimate"
+        },
+        {
+            "id": "disfl-qa-572f6ec7",
+            "name": "Disfl-QA: What is considered the epitome...",
+            "input": "Who or wait what is considered the epitome of the Rhine romanticism?",
+            "expected_output": "What is considered the epitome of the Rhine romanticism? ",
+            "must_contain": [
+                "romanticism",
+                "considered",
+                "epitome"
+            ],
+            "must_not_contain": [
+                "wait"
+            ],
+            "difficulty": "ultimate"
+        },
+        {
+            "id": "disfl-qa-5726fa52",
+            "name": "Disfl-QA: What are the two symbols that ...",
+            "input": "Which countries, actually, what are the two symbols that signify pharmacy in English-speaking countries?",
+            "expected_output": "What are the two symbols that signify pharmacy in English-speaking countries?",
+            "must_contain": [
+                "countries",
+                "speaking",
+                "pharmacy"
+            ],
+            "must_not_contain": [
+                "which",
+                "actually"
+            ],
+            "difficulty": "ultimate"
+        },
+        {
+            "id": "disfl-qa-5ad29b43",
+            "name": "Disfl-QA: How long did the Ice Ages last...",
+            "input": "What period ugh erm how long did the Ice Ages last?",
+            "expected_output": "How long did the Ice Ages last?",
+            "must_contain": [],
+            "must_not_contain": [
+                "period",
+                "what"
+            ],
+            "difficulty": "ultimate"
+        },
+        {
+            "id": "disfl-qa-5a551230",
+            "name": "Disfl-QA: What is peer to peer?...",
+            "input": "Where umm sorry, what is peer to peer?",
+            "expected_output": "What is peer to peer?",
+            "must_contain": [],
+            "must_not_contain": [
+                "sorry",
+                "where"
+            ],
+            "difficulty": "ultimate"
+        },
+        {
+            "id": "disfl-qa-572f6a0b",
+            "name": "Disfl-QA: What flows between the Bingen ...",
+            "input": "between the Bingen and Bonn, What flows ?",
+            "expected_output": "What flows between the Bingen and Bonn?",
+            "must_contain": [
+                "between",
+                "Bingen",
+                "flows"
+            ],
+            "must_not_contain": [],
+            "difficulty": "ultimate"
+        },
+        {
+            "id": "disfl-qa-5a25b668",
+            "name": "Disfl-QA: What are some examples of lega...",
+            "input": "When is the legal condition no wait What are some examples of legal considerations for an addition?",
+            "expected_output": "What are some examples of legal considerations for an addition?",
+            "must_contain": [
+                "considerations",
+                "addition",
+                "examples"
+            ],
+            "must_not_contain": [
+                "wait",
+                "when",
+                "condition"
+            ],
+            "difficulty": "ultimate"
+        },
+        {
+            "id": "disfl-qa-5ad402ae",
+            "name": "Disfl-QA: Where did the Song dynasty con...",
+            "input": "Where did the Kublai no the Song dynasty continue be peaceful with Kublai?",
+            "expected_output": "Where did the Song dynasty continue be peaceful with Kublai?",
+            "must_contain": [
+                "peaceful",
+                "continue",
+                "dynasty"
+            ],
+            "must_not_contain": [],
+            "difficulty": "ultimate"
+        }
+    ]
+}

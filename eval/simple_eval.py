@@ -63,7 +63,7 @@ class PromptEvaluator:
         try:
             is_reasoning = self.is_reasoning_model(self.model)
             
-            # Build request body mirroring FluidVoice's LLMClient.swift
+            # Build request body
             body: Dict[str, Any] = {
                 "model": self.model,
                 "messages": [
@@ -88,7 +88,7 @@ class PromptEvaluator:
             reasoning_effort = None
             enable_thinking = None
             
-            # 2. Hardcoded defaults (matching FluidVoice)
+            # 2. Hardcoded defaults
             if "gpt-oss" in model_lower or model_lower.startswith("openai/"):
                 reasoning_effort = "medium"
             elif model_lower.startswith("o1"):
@@ -107,21 +107,22 @@ class PromptEvaluator:
             reasoning_budget = settings.get("reasoning_budget")
 
             # Apply to body
+            eb = {}
             if reasoning_effort:
                 body["reasoning_effort"] = reasoning_effort
             
+            if reasoning_budget:
+                eb["reasoning_budget"] = reasoning_budget
+
             if "nvidia/" in model_lower:
-                # Nvidia uses extra_body for these
-                eb = {}
-                if reasoning_budget:
-                    eb["reasoning_budget"] = reasoning_budget
                 if enable_thinking is not None:
                     eb["chat_template_kwargs"] = {"enable_thinking": enable_thinking}
-                if eb:
-                    body["extra_body"] = eb
             else:
                 if enable_thinking is not None:
-                    body["enable_thinking"] = enable_thinking
+                    eb["enable_thinking"] = enable_thinking
+            
+            if eb:
+                body["extra_body"] = eb
 
             # Check for Responses API (OpenAI GPT-5.1 style)
             if settings.get("use_responses_api"):
@@ -170,7 +171,7 @@ class PromptEvaluator:
                     # Could log this for debugging, but we only use the final content
                     pass
             
-            # FluidVoice strips thinking before using the content
+            # Strip thinking tags before using the content
             output = self.strip_thinking(raw_output)
             
             # 2. Similarity Score (Fuzzy matching)
@@ -184,12 +185,15 @@ class PromptEvaluator:
             failures = []
             
             for term in test_case.get("must_contain", []):
-                if term.lower() not in output.lower():
+                # Use regex for whole-word matching to avoid substring issues (e.g., 'no' in 'not')
+                pattern = r'\b' + re.escape(term.lower()) + r'\b'
+                if not re.search(pattern, output.lower()):
                     passed = False
                     failures.append(f"Missing: '{term}'")
                     
             for term in test_case.get("must_not_contain", []):
-                if term.lower() in output.lower():
+                pattern = r'\b' + re.escape(term.lower()) + r'\b'
+                if re.search(pattern, output.lower()):
                     passed = False
                     failures.append(f"Should not contain: '{term}'")
             
@@ -220,12 +224,12 @@ class PromptEvaluator:
             }
 
 async def main():
-    parser = argparse.ArgumentParser(description="FluidVoice Prompt Evaluator")
+    parser = argparse.ArgumentParser(description="LLM Prompt Evaluator")
     parser.add_argument("--model", type=str, help="Model name (e.g., llama-3-8b)")
     parser.add_argument("--provider", type=str, help="Provider name (openai, groq, etc.)")
     parser.add_argument("--difficulty", type=str, help="Filter by difficulty (easy, medium, hard)")
     parser.add_argument("--prompt", type=str, default="system_prompt.txt", help="Prompt file name in prompts/dictation_mode/")
-    parser.add_argument("-i", "--input", type=str, default="test", choices=["test", "val"], help="Input test set: 'test' (training) or 'val' (validation)")
+    parser.add_argument("-i", "--input", type=str, default="test", help="Input test set: 'test', 'val', or a path/to/file.json")
     parser.add_argument("--ls", action="store_true", help="List all available models")
     args = parser.parse_args()
 
@@ -302,13 +306,24 @@ async def main():
     with open(prompt_path, "r") as f:
         system_prompt = f.read()
     
-    # Map input shorthand to actual filename
+    # Map input shorthand to actual filename, but also allow direct file paths
     input_files = {"test": "test_cases.json", "val": "val.json"}
-    tests_filename = input_files[args.input]
-    tests_path = os.path.join("tests/dictation_mode", tests_filename)
+    
+    if args.input in input_files:
+        tests_filename = input_files[args.input]
+        tests_path = os.path.join("tests/dictation_mode", tests_filename)
+    else:
+        # Assume it's a direct path if it ends in .json
+        if args.input.endswith(".json"):
+            tests_path = args.input
+        else:
+            # Try to see if it's in the tests directory
+            tests_path = os.path.join("tests/dictation_mode", args.input if args.input.endswith(".json") else f"{args.input}.json")
+    
     if not os.path.exists(tests_path):
         console.print(f"[red]Error: Test file '{tests_path}' not found.[/red]")
         return
+
     with open(tests_path, "r") as f:
         tests_data = json.load(f)
     

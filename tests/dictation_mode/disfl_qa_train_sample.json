@@ -1,0 +1,321 @@
+{
+    "mode": "dictation",
+    "description": "Disfl-QA dataset (20 cases)",
+    "tests": [
+        {
+            "id": "disfl-qa-5a5918ff",
+            "name": "Disfl-QA: What do unstable isotope studi...",
+            "input": "What do petrologists no what do unstable isotope studies indicate?",
+            "expected_output": "What do unstable isotope studies indicate?",
+            "must_contain": [
+                "indicate",
+                "unstable",
+                "studies"
+            ],
+            "must_not_contain": [
+                "petrologists"
+            ],
+            "difficulty": "ultimate"
+        },
+        {
+            "id": "disfl-qa-5ad4f40c",
+            "name": "Disfl-QA: What is the basic unit of terr...",
+            "input": "What is the second level of territorial division in Poland no make that the basic unit of territorial division in Warsaw?",
+            "expected_output": "What is the basic unit of territorial division in Warsaw?",
+            "must_contain": [
+                "territorial",
+                "division",
+                "Warsaw"
+            ],
+            "must_not_contain": [
+                "second",
+                "poland",
+                "make"
+            ],
+            "difficulty": "ultimate"
+        },
+        {
+            "id": "disfl-qa-57268436",
+            "name": "Disfl-QA: Which genus lack tentacles and...",
+            "input": "Juvenile platyctenids no wow Which genus lack tentacles and sheaths?",
+            "expected_output": "Which genus lack tentacles and sheaths?",
+            "must_contain": [
+                "tentacles",
+                "sheaths",
+                "Which"
+            ],
+            "must_not_contain": [
+                "juvenile",
+                "platyctenids"
+            ],
+            "difficulty": "ultimate"
+        },
+        {
+            "id": "disfl-qa-5729f799",
+            "name": "Disfl-QA: Long-lived memory cells can re...",
+            "input": "When a pathogen is met again scratch that I mean long-lived memory cells are capable of remembering previous encounters with what?",
+            "expected_output": "Long-lived memory cells can remember previous encounters with what?",
+            "must_contain": [
+                "encounters",
+                "previous",
+                "remember"
+            ],
+            "must_not_contain": [
+                "scratch",
+                "that",
+                "mean"
+            ],
+            "difficulty": "ultimate"
+        },
+        {
+            "id": "disfl-qa-5ad3b9cd",
+            "name": "Disfl-QA: What led to Newcastle's rise t...",
+            "input": "What led to the Duke of Cumberland's rise to power as military advisor sorry no Newcastle's?",
+            "expected_output": "What led to Newcastle's rise to power as military advisor?",
+            "must_contain": [
+                "Newcastle",
+                "military",
+                "advisor"
+            ],
+            "must_not_contain": [
+                "sorry",
+                "cumberland",
+                "duke"
+            ],
+            "difficulty": "ultimate"
+        },
+        {
+            "id": "disfl-qa-5a665b56",
+            "name": "Disfl-QA: How long did Julia Butterfly H...",
+            "input": "Did Julia Butterfly wait How long did Julia Butterfly Hill live near a nuclear-missile installation?",
+            "expected_output": "How long did Julia Butterfly Hill live near a nuclear-missile installation?",
+            "must_contain": [
+                "installation",
+                "Butterfly",
+                "nuclear"
+            ],
+            "must_not_contain": [
+                "wait"
+            ],
+            "difficulty": "ultimate"
+        },
+        {
+            "id": "disfl-qa-5ad4bcc4",
+            "name": "Disfl-QA: When was Warsaw ranked as the ...",
+            "input": "When was Frankfurt ranked as the 22nd most liveable city in the world, no sorry it was Warsaw?",
+            "expected_output": "When was Warsaw ranked as the 22nd most liveable city in the world?",
+            "must_contain": [
+                "liveable",
+                "ranked",
+                "Warsaw"
+            ],
+            "must_not_contain": [
+                "sorry",
+                "frankfurt"
+            ],
+            "difficulty": "ultimate"
+        },
+        {
+            "id": "disfl-qa-5729727b",
+            "name": "Disfl-QA: What is the name of the suppos...",
+            "input": "What is the name of the number theory, or rather, the supposition that any number larger than 2 can be represented as the sum of two primes?",
+            "expected_output": "What is the name of the supposition that any number larger than 2 can be represented as the sum of two primes?",
+            "must_contain": [
+                "supposition",
+                "represented",
+                "primes"
+            ],
+            "must_not_contain": [
+                "rather",
+                "theory"
+            ],
+            "difficulty": "ultimate"
+        },
+        {
+            "id": "disfl-qa-5ad02bef",
+            "name": "Disfl-QA: Which group sets the time agen...",
+            "input": "Who represents instead how about which group sets the time agenda?",
+            "expected_output": "Which group sets the time agenda?",
+            "must_contain": [
+                "agenda",
+                "Which",
+                "group"
+            ],
+            "must_not_contain": [
+                "represents",
+                "about",
+                "instead"
+            ],
+            "difficulty": "ultimate"
+        },
+        {
+            "id": "disfl-qa-5ad26925",
+            "name": "Disfl-QA: When three forces act on a poi...",
+            "input": "What geometric er when three forces act on a point particle, what happens?",
+            "expected_output": "When three forces act on a point particle, what happens?",
+            "must_contain": [
+                "particle",
+                "happens",
+                "forces"
+            ],
+            "must_not_contain": [
+                "geometric"
+            ],
+            "difficulty": "ultimate"
+        },
+        {
+            "id": "disfl-qa-5ad4faa4",
+            "name": "Disfl-QA: What profession does Zbigniew ...",
+            "input": "What profession does Irena Bajerska no Zbigniew Marek have?",
+            "expected_output": "What profession does Zbigniew Marek have?",
+            "must_contain": [
+                "profession",
+                "Zbigniew",
+                "Marek"
+            ],
+            "must_not_contain": [
+                "irena",
+                "bajerska"
+            ],
+            "difficulty": "ultimate"
+        },
+        {
+            "id": "disfl-qa-5729d609",
+            "name": "Disfl-QA: What type of wages does mechan...",
+            "input": "What type of wages does equipment for labor no the mechanization and automation lead to?",
+            "expected_output": "What type of wages does mechanization and automation lead to?",
+            "must_contain": [
+                "mechanization",
+                "automation",
+                "wages"
+            ],
+            "must_not_contain": [
+                "equipment",
+                "labor"
+            ],
+            "difficulty": "ultimate"
+        },
+        {
+            "id": "disfl-qa-5727ee37",
+            "name": "Disfl-QA: What type of entrepreneurship ...",
+            "input": "What type of impact or uh entrepreneurship leads to advancements in technology?",
+            "expected_output": "What type of entrepreneurship leads to advancements in technology?",
+            "must_contain": [
+                "entrepreneurship",
+                "advancements",
+                "technology"
+            ],
+            "must_not_contain": [
+                "uh",
+                "impact"
+            ],
+            "difficulty": "ultimate"
+        },
+        {
+            "id": "disfl-qa-57335ddb",
+            "name": "Disfl-QA: What does the highest level of...",
+            "input": "Why does What does the highest level of the Vistula plateau contain?",
+            "expected_output": "What does the highest level of the Vistula plateau contain?",
+            "must_contain": [
+                "Vistula",
+                "contain",
+                "plateau"
+            ],
+            "must_not_contain": [],
+            "difficulty": "ultimate"
+        },
+        {
+            "id": "disfl-qa-5a2ed354",
+            "name": "Disfl-QA: What percentage of Venice resi...",
+            "input": "What percentage of Parisian residents died of the plague in 1361 no Venice residents?",
+            "expected_output": "What percentage of Venice residents died of the plague in 1361?",
+            "must_contain": [
+                "percentage",
+                "residents",
+                "plague"
+            ],
+            "must_not_contain": [
+                "parisian"
+            ],
+            "difficulty": "ultimate"
+        },
+        {
+            "id": "disfl-qa-57379829",
+            "name": "Disfl-QA: What is the effect of beta dec...",
+            "input": "What is the result of no no I mean what is the effect of beta decay?",
+            "expected_output": "What is the effect of beta decay?",
+            "must_contain": [
+                "effect",
+                "decay"
+            ],
+            "must_not_contain": [
+                "result",
+                "mean"
+            ],
+            "difficulty": "ultimate"
+        },
+        {
+            "id": "disfl-qa-5a835482",
+            "name": "Disfl-QA: What kind of organs do some sp...",
+            "input": "What kind of organs do ctenophores or no make that do some sponges have?",
+            "expected_output": "What kind of organs do some sponges have?",
+            "must_contain": [
+                "sponges",
+                "organs"
+            ],
+            "must_not_contain": [
+                "make",
+                "ctenophores",
+                "that"
+            ],
+            "difficulty": "ultimate"
+        },
+        {
+            "id": "disfl-qa-5acfed94",
+            "name": "Disfl-QA:  How did the party overthrow t...",
+            "input": "How did the party overthrow the elected government in 1985 no i mean 1929?",
+            "expected_output": " How did the party overthrow the elected government in 1929?",
+            "must_contain": [
+                "government",
+                "overthrow",
+                "elected"
+            ],
+            "must_not_contain": [
+                "1985",
+                "mean"
+            ],
+            "difficulty": "ultimate"
+        },
+        {
+            "id": "disfl-qa-5725daa8",
+            "name": "Disfl-QA: In what year did Fresno get it...",
+            "input": "How no sorry in what year did Fresno get its first pedestrian mall?",
+            "expected_output": "In what year did Fresno get its first pedestrian mall?",
+            "must_contain": [
+                "pedestrian",
+                "Fresno",
+                "first"
+            ],
+            "must_not_contain": [
+                "sorry"
+            ],
+            "difficulty": "ultimate"
+        },
+        {
+            "id": "disfl-qa-5ad4f067",
+            "name": "Disfl-QA: Who were the main detractors o...",
+            "input": "What are or actually who were the main detractors of the humoral theory of immunity?",
+            "expected_output": "Who were the main detractors of the humoral theory of immunity?",
+            "must_contain": [
+                "detractors",
+                "immunity",
+                "humoral"
+            ],
+            "must_not_contain": [
+                "actually",
+                "what"
+            ],
+            "difficulty": "ultimate"
+        }
+    ]
+}

@@ -52,7 +52,7 @@ wheels = [
 ]
 
 [[package]]
-name = "fluidvoice-prompt-eval"
+name = "llm-prompt-eval"
 version = "0.1.0"
 source = { virtual = "." }
 dependencies = [

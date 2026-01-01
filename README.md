@@ -2,7 +2,7 @@
 description: How to evaluate and improve LLM prompts across different models
 ---
 
-# FluidVoice Prompt Evaluation Workflow
+# LLM Prompt Evaluation Workflow
 
 ---
 
@@ -199,28 +199,28 @@ Output ONLY the rewritten text. No explanations, no quotes, no preamble.
 
 # Workflow Steps
 
-This workflow helps you systematically evaluate and improve LLM prompts used in FluidVoice for better compatibility with different models (especially smaller/open models).
+This workflow helps you systematically evaluate and improve LLM prompts for AI dictation and text processing for better compatibility with different models (especially smaller/open models).
 
 ## 1. Set Up Evaluation Repository
 
-Create a new repository for prompt evaluation (separate from FluidVoice main repo):
+Create a new repository for prompt evaluation:
 
 ```bash
-mkdir FluidVoice-Prompt-Eval
-cd FluidVoice-Prompt-Eval
+mkdir LLM-Prompt-Eval
+cd LLM-Prompt-Eval
 git init
 ```
 
 ## 2. Copy Prompt Files for Reference
 
-The following source files contain all prompts used in FluidVoice. Copy them to your eval repo as reference:
+The following source files contain all prompts. Copy them to your eval repo as reference:
 
 ```bash
 # Create reference directory
 mkdir -p reference/prompts
 
-# Copy the key files (run from FluidVoice root)
-# These paths are relative to FluidVoice repo root:
+# Copy the key files (run from app root)
+# These paths are relative to repo root:
 cp Sources/Fluid/Services/CommandModeService.swift reference/prompts/
 cp Sources/Fluid/Services/RewriteModeService.swift reference/prompts/
 cp Sources/Fluid/ContentView.swift reference/prompts/
@@ -423,7 +423,7 @@ For each failing model:
 
 Once you find improved prompts:
 1. Document the changes and why they work
-2. Create a PR to FluidVoice with the updated prompts
+2. Create a PR with the updated prompts
 3. Consider model-specific prompt variants if needed
 
 ---
